@@ -18,5 +18,14 @@
     <ClCompile Include="chap1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chap2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
