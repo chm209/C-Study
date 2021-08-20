@@ -48,5 +48,8 @@
     <ClCompile Include="chap11.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chap12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
