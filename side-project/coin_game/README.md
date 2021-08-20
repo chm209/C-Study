@@ -34,6 +34,6 @@
 ---
 ## 라이센스
 
-**MIT License**
+***GNU General Public License v3.0***
 
-**Copyright 2017-2021. remk0202 all right reserved**
+***Copyright 2017-2021. chm209 all right reserved***

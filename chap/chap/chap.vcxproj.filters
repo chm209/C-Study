@@ -27,5 +27,29 @@
     <ClCompile Include="chap4.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chap5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap6.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chap12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
