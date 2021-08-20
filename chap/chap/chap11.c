@@ -90,7 +90,7 @@ void pb3()
 	int array[3] = { 10, 20, 30 };
 	printf("%d %x %x\n", array[0], &ip, &ipp);
 
-	ip = &array+0;
+	ip = *&array+0;
 	ipp = &ip;
 	printf("%d %x %x\n", array[0] , &ip, &ipp);
 	printf("%d %d %x\n", array[0], *ip, &ipp);
