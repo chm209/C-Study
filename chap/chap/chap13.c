@@ -7,7 +7,7 @@ void pb1_func(char c, char* str, int num1, double num2);
 void pb2(void);
 void pb2_func(int* array1, int* array2);
 void pb3(void);
-pb3_swap(int*, int);
+void pb3_swap(int*, int);
 void pb4(void);
 void* add(int num1, int num2);
 void* subtract(int a, int b);
@@ -130,7 +130,7 @@ void pb3()
 	pb3_swap(array, sizeof(array) / sizeof(int));
 }
 
-pb3_swap(int* array, int num)
+void pb3_swap(int* array, int num)
 {
 	int temp = 0, temp2 = 0;
 	printf("½ÇÇà Àü: %d %d %d %d %d %d %d %d\n", *(array+0), *(array + 1), *(array + 2), *(array + 3), *(array + 4), *(array + 5), *(array + 6), *(array + 7));
