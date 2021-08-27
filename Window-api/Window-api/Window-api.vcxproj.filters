@@ -18,11 +18,5 @@
     <ClCompile Include="ch01.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ch02-bubble.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ch03-insertion.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
