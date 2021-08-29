@@ -21,5 +21,23 @@
     <ClCompile Include="ch02-bubble.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch02-insertion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-merge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-merge-복습.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-merge-복습2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-merge-복습3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-quick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
