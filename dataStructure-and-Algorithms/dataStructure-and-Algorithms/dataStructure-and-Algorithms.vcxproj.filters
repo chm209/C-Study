@@ -36,5 +36,8 @@
     <ClCompile Include="ch02-merge-복습3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch02-quick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
