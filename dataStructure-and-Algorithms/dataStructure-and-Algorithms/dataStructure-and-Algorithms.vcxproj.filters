@@ -39,5 +39,11 @@
     <ClCompile Include="ch02-quick.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch02-quick-복습.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-shell.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
