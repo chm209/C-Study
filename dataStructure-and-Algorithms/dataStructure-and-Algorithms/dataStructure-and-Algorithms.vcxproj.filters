@@ -45,5 +45,11 @@
     <ClCompile Include="ch02-shell.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch02-shell-복습.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch02-heap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
