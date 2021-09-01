@@ -51,5 +51,14 @@
     <ClCompile Include="ch02-heap.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch02-heap-복습.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch03-stack-array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch03-stack-linked_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
