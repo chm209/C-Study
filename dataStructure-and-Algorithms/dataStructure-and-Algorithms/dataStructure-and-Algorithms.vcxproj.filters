@@ -60,5 +60,16 @@
     <ClCompile Include="ch03-stack-linked_list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch03-stack-node.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch03.sn.main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ch03-stack-node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
