@@ -1,33 +1,29 @@
-Ôªø#pragma comment(lib, "ws2_32.lib")
+// º“ƒœ ≈ÎΩ≈«“∂ß « ø‰«— ∂Û¿Ã∫Í∑Ø∏Æ
+#pragma comment(lib, "ws2_32.lib")
 #include <stdio.h>
 #include <WinSock2.h>
-#include <Windows.h>
-
-void server(int);
-void client(int, char*);
-void ErrorHandling(char*);
+#include "socket.h"
 
 int  main(void)
 {
-	int menu = 0, port = 0;
+	short menu = 0, port = 0;
 	char ip[100];
 
 	puts("0. server / 1. client");
-	printf("Î©îÎâ¥ Î≤àÌò∏Î•º ÏûÖÎ†•ÌïòÏÑ∏Ïöî: ");
-	scanf("%d", &menu);
+	scanf("%hd", &menu);
 
 	switch (menu)
 	{
 	case 1:
-		printf("Ìè¨Ìä∏Î≤àÌò∏ ÏûÖÎ†•: ");
-		scanf("%d", &port);
-		printf("IP ÏûÖÎ†•: ");
+		printf("∆˜∆Æπ¯»£ ¿‘∑¬: ");
+		scanf("%hd", &port);
+		printf("IP ¿‘∑¬: ");
 		scanf("%s", &ip);
 		client(port, ip);
 		break;
 	default:
-		printf("Ìè¨Ìä∏Î≤àÌò∏ ÏûÖÎ†•: ");
-		scanf("%d", &port);
+		printf("∆˜∆Æπ¯»£ ¿‘∑¬: ");
+		scanf("%hd", &port);
 		server(port);
 		break;
 	}
@@ -43,11 +39,14 @@ void ErrorHandling(char* Message)
 
 void server(int port)
 {
+	int sockaddr_in_size = 0, get_size = 0;
+	// ±ÊæÓ¡ˆ∏È SOCKPACKET_Buffer[300] ¥√∑¡æﬂ«‘
+	char message[100], SOCKPACKET_Buffer[300];
+
 	WSADATA wsaData;
 	SOCKET listen_sock, connect_sock;
 	SOCKADDR_IN listen_addr, connect_addr;
-	int sockaddr_in_size;
-	char message[100];
+	SOCPACKET* sockPacket;
 
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
 		ErrorHandling("WSAStartup() error");
@@ -74,15 +73,12 @@ void server(int port)
 	if (connect_sock == INVALID_SOCKET)
 		ErrorHandling("accept() error");
 
-	while (1)
-	{
-		if (message == "q")
-		{
-			break;
-		}
-		recv(connect_sock, message, 12, 0);
-		printf("server: %s\n", message);
-	}
+	// ±ÊæÓ¡ˆ∏È flag ∞™ ∞«µÂ∑¡æﬂ«‘ 300 ¿˙∞≈
+	get_size = recv(connect_sock, SOCKPACKET_Buffer, 300, 0);
+	SOCKPACKET_Buffer[get_size] = '\0';
+
+	sockPacket = (SOCPACKET*)SOCKPACKET_Buffer;
+	printf("%d %d %s %s", sockPacket->Data, sockPacket->Data2, sockPacket->StringData1, sockPacket->StringData2);
 
 	closesocket(connect_sock);
 	closesocket(listen_sock);
@@ -96,6 +92,7 @@ void client(int port, char* ip)
 	WSADATA wsaData;
 	SOCKET connect_sock;
 	SOCKADDR_IN connect_addr;
+	SOCPACKET sockPacket;
 
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
 		ErrorHandling("WSAStartup() error");
@@ -113,15 +110,13 @@ void client(int port, char* ip)
 	if (connect(connect_sock, (SOCKADDR*)&connect_addr, sizeof(connect_addr)))
 		ErrorHandling("connect() error");
 
-	printf("ÏûÖÎ†•: ");
-	scanf("%s", &msg);
+	sockPacket.Data = 10;
+	sockPacket.Data2 = 20;
+	sprintf(sockPacket.StringData1, "%s", "Hello");
+	sprintf(sockPacket.StringData2, "%s", "World");
 
-	if (msg != "q")
-	{
-		// send data
-		send(connect_sock, msg, strlen(msg), 0);
-	}
-	
+	send(connect_sock, (char*)&sockPacket, sizeof(SOCPACKET), 0);
+
 	closesocket(connect_sock);
 	WSACleanup();
 	system("pause");
